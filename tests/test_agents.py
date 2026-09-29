@@ -366,6 +366,20 @@ def test_full_run(tmp: Path) -> list[Finding]:
         f"got {stopped.updated_at.date()}",
     )
 
+    # A finding must not re-emit while it means the same thing. card usage
+    # stayed stopped for 36 straight days; that is one finding, not 36.
+    card = of_key(trace, "card_activity_trend")
+    stopped_rows = [f for f in card if f.value.get("stopped")]
+    check(
+        "card_activity_trend does not re-emit daily while stopped",
+        len(stopped_rows) == 1,
+        f"got {len(stopped_rows)} stopped emissions",
+    )
+    # 74 day boundaries are replayed. Emitting on fewer than half of them shows
+    # change detection is working; the survivors are days when purchases_7d
+    # genuinely moved, which is a real change and should be recorded.
+    check("card_activity_trend emits on well under half the days", len(card) < 37, f"got {len(card)} of 74")
+
     # 8. engagement_trend reaches medium or high before 2026-03-08
     eng = first_reaching(trace, "engagement_trend", lambda f: f.band_rank >= 1)
     check("engagement_trend reaches medium or high", eng is not None)

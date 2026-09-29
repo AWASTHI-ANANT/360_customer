@@ -549,6 +549,10 @@ class SignalAgent(Agent):
                 if stopped
                 else f"{len(purchases)} purchases in {window}d vs {expected:.1f} expected"
             ),
+            # days_since_last_purchase climbs every day while the finding means
+            # exactly the same thing, so it must not drive change detection --
+            # otherwise this one key floods the log with a line per dead day.
+            dedupe_on={"stopped": stopped, "purchases_7d": len(purchases)},
         )
 
     def _salary_absence(self, sim_date: date, ctx: AgentContext) -> Optional[Finding]:

@@ -109,15 +109,22 @@ class Agent(ABC):
         notes: Optional[str] = None,
         event_id: Optional[str] = None,
         force: bool = False,
+        dedupe_on: Optional[dict[str, Any]] = None,
     ) -> Optional[Finding]:
         """Write a finding to working memory, log it, and open an episode if it matters.
 
         Returns None when the value and band are unchanged since last time --
         that keeps the daily log readable instead of one line per day per key.
+
+        `dedupe_on` overrides what counts as a change. Some values carry a field
+        that moves every single day (days_since_last_purchase) while the finding
+        itself means the same thing; comparing the whole value would re-emit
+        daily. Pass the fields that actually matter instead.
         """
         import json as _json
 
-        signature = (_json.dumps(value, sort_keys=True, default=str), band)
+        basis = value if dedupe_on is None else dedupe_on
+        signature = (_json.dumps(basis, sort_keys=True, default=str), band)
         if not force and self._last.get(key) == signature:
             return None
         self._last[key] = signature
