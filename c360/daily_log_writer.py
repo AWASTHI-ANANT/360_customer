@@ -16,7 +16,8 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any, Optional, Sequence
 
-from .loader import Event, iso
+from .loader import CustomerProfile, Event, iso
+from .masking import mask
 
 log = logging.getLogger(__name__)
 
@@ -114,8 +115,12 @@ class DailyLogWriter:
         output_dir: str | Path = "logs",
         filename: Optional[str] = None,
         fsync: bool = True,
+        profile: Optional[CustomerProfile] = None,
     ) -> None:
         self.scenario_id = scenario_id
+        # Summaries quote free text (counterparty names, support transcripts),
+        # so they go through the same masking as LLM prompts before writing.
+        self.profile = profile
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.path = self.output_dir / (filename or f"{scenario_id}_daily.jsonl")
@@ -162,7 +167,7 @@ class DailyLogWriter:
                 "account_id": event.account_id,
                 "source_system": event.source_system,
                 "event_type": event.event_type,
-                "summary": summarize_event(event),
+                "summary": mask(summarize_event(event), self.profile)[0],
                 "stream": event.stream,
                 "late_arriving": event.is_late_arriving,
             }

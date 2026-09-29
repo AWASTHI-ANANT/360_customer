@@ -664,14 +664,5 @@
     "action_subtype": null,
     "hitl_status": "auto_approved",
     "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
-    "as_of_time": "2026-04-15T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
   }
 ]

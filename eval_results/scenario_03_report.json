@@ -123,7 +123,7 @@
   "summary": {
     "scenario_id": "scenario_07_churn_risk",
     "checkpoints_expected": 3,
-    "checkpoints_submitted": 75,
+    "checkpoints_submitted": 74,
     "checkpoints_dropped": 0,
     "state_accuracy": 1.0,
     "band_accuracy": 0.0,

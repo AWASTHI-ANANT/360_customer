@@ -38,6 +38,11 @@ from c360 import llm_client
 
 ROOT = Path(__file__).resolve().parent
 
+# --perturb: arrival jitter window, number of re-sent events, default seed.
+PERTURB_HOURS = 24
+PERTURB_DUPLICATES = 5
+PERTURB_SEED = 7
+
 
 def run_one(
     scenario_id: str,
@@ -49,6 +54,9 @@ def run_one(
     show_findings: bool = False,
     mode: str = "auto",
     inject: Path | None = None,
+    perturb: bool = False,
+    perturb_seed: int = PERTURB_SEED,
+    checkpoint_dir: Path | None = None,
 ) -> dict:
     scn = load_scenario(scenario_id, data_root=data_root)
     print(f"\n=== {scn.scenario_id} | {scn.profile.name} ({scn.customer_id}) ===")
@@ -67,7 +75,7 @@ def run_one(
         memory.reset()
     memory.load()
 
-    writer = DailyLogWriter(scn.scenario_id, output_dir=out_dir / "logs")
+    writer = DailyLogWriter(scn.scenario_id, output_dir=out_dir / "logs", profile=scn.profile)
     if fresh:
         writer.truncate_and_restart()
 
@@ -77,6 +85,12 @@ def run_one(
     if inject is not None:
         live_events = _inject(live_events, inject, scn)
         print(f"    injected {len(live_events) - len(scn.live_events)} events from {inject}")
+    # --perturb reorders arrival within +/-24h and re-sends a few events, so a
+    # run can be checked against the clean one for order/duplicate sensitivity.
+    if perturb:
+        live_events, dupes = _perturb(live_events, perturb_seed)
+        print(f"    perturbed: arrival shuffled +/-{PERTURB_HOURS}h (seed {perturb_seed}), "
+              f"duplicated {', '.join(dupes)}")
 
     # History seeds the event store, so a 14-day window on day 1 of the live
     # stream still sees the customer's ordinary behaviour behind it.
@@ -85,8 +99,8 @@ def run_one(
     llm_client.configure(
         scn.scenario_id, cache_dir=out_dir / "llm_cache", trace_dir=out_dir / "logs"
     )
-    hitl.configure(scn.scenario_id, log_dir=out_dir / "logs")
-    checkpoints = CheckpointWriter(scn.scenario_id, output_dir=ROOT / "output")
+    hitl.configure(scn.scenario_id, log_dir=out_dir / "logs", fresh=fresh)
+    checkpoints = CheckpointWriter(scn.scenario_id, output_dir=checkpoint_dir or ROOT / "output")
     reason = llm_client.unavailable_reason()
     print(f"    llm: {'offline -- ' + reason if reason else 'available (' + llm_client.get_client().model + ')'}")
 
@@ -127,8 +141,12 @@ def run_one(
             realtime=realtime,
             **({"speed_seconds_per_day": speed} if realtime and speed else {}),
         )
-        # One final checkpoint at simulated_end so the last state is always scored.
-        checkpoints.write(scn.replay_config.simulated_end, memory)
+        # One final checkpoint at simulated_end so the last state is always scored,
+        # unless that day's boundary already wrote it (as_of_time stays unique).
+        final_as_of = iso(scn.replay_config.simulated_end)
+        last = checkpoints.latest()
+        if last is None or last["as_of_time"] < final_as_of:
+            checkpoints.write(scn.replay_config.simulated_end, memory)
         memory.save()
 
     empty_days = sum(1 for n in clock.event_counts.values() if n == 0)
@@ -219,6 +237,32 @@ def _inject(live_events, fixture: Path, scn):
     return merged
 
 
+def _perturb(live_events, seed: int):
+    """Shuffle arrival order within +/-PERTURB_HOURS and re-send PERTURB_DUPLICATES events.
+
+    event_time is never changed; ingestion_time becomes the jittered arrival
+    (never before event_time). Duplicates are exact copies, same event_id,
+    arriving up to PERTURB_HOURS after the original. Seeded, so repeatable.
+    """
+    import dataclasses
+    import random
+    from datetime import timedelta
+
+    rng = random.Random(seed)
+    spread = PERTURB_HOURS * 3600
+    arrivals = []
+    for ev in live_events:
+        arrival = ev.event_time + timedelta(seconds=rng.uniform(-spread, spread))
+        ev = dataclasses.replace(ev, ingestion_time=max(arrival, ev.event_time))
+        arrivals.append((arrival, ev))
+    picks = rng.sample(range(len(live_events)), min(PERTURB_DUPLICATES, len(live_events)))
+    for i in sorted(picks):
+        arrival, ev = arrivals[i]
+        arrivals.append((arrival + timedelta(seconds=rng.uniform(0, spread)), ev))
+    arrivals.sort(key=lambda pair: pair[0])
+    return [ev for _, ev in arrivals], [live_events[i].event_id for i in sorted(picks)]
+
+
 def print_findings(trace: list[Finding]) -> None:
     """Readable list of every finding, with date and evidence IDs."""
     print(f"\n    --- findings ({len(trace)}) ---")
@@ -251,6 +295,12 @@ def main(argv: list[str] | None = None) -> int:
                     help="never ask a human; actions stay 'escalated' (default)")
     ap.add_argument("--inject", type=Path, default=None,
                     help="splice a JSONL fixture into a copy of the live stream")
+    ap.add_argument("--perturb", action="store_true",
+                    help=f"shuffle arrival +/-{PERTURB_HOURS}h and duplicate "
+                         f"{PERTURB_DUPLICATES} events (order/dedup robustness check)")
+    ap.add_argument("--seed", type=int, default=PERTURB_SEED, help="seed for --perturb")
+    ap.add_argument("--checkpoint-dir", type=Path, default=ROOT / "output",
+                    help="where {scenario}_checkpoints.json is written")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
 
@@ -269,7 +319,8 @@ def main(argv: list[str] | None = None) -> int:
             s, args.data_root, args.out_dir, args.realtime, args.speed,
             fresh=not args.keep, show_findings=args.findings,
             mode="interactive" if args.interactive else "auto",
-            inject=args.inject,
+            inject=args.inject, perturb=args.perturb, perturb_seed=args.seed,
+            checkpoint_dir=args.checkpoint_dir,
         )
         for s in scenarios
     ]

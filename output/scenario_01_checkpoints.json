@@ -664,14 +664,5 @@
     "action_subtype": null,
     "hitl_status": "auto_approved",
     "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
-  },
-  {
-    "as_of_time": "2026-04-15T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
   }
 ]

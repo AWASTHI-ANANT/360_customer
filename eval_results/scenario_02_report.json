@@ -99,7 +99,7 @@
   "summary": {
     "scenario_id": "scenario_06_new_child",
     "checkpoints_expected": 2,
-    "checkpoints_submitted": 75,
+    "checkpoints_submitted": 74,
     "checkpoints_dropped": 0,
     "state_accuracy": 1.0,
     "band_accuracy": 0.5,

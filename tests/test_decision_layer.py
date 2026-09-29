@@ -336,6 +336,11 @@ def test_acceptance(tmp: Path) -> list[dict]:
     hard("checkpoints were produced", len(cps) > 0)
     hard("every checkpoint validates",
          all(CheckpointWriter.validate(c) for c in cps))
+    times = [c["as_of_time"] for c in cps]
+    hard("as_of_time strictly increasing (no duplicate final checkpoint)",
+         all(a < b for a, b in zip(times, times[1:])), str(times[-3:]))
+    hard("approvals log exists even with zero requests",
+         (tmp / "logs" / f"{SCENARIO}_approvals.jsonl").exists())
 
     # 1. as of 2026-02-15: churn_risk / low / no_action
     c1 = at(cps, "2026-02-15T00:00:00Z")

@@ -56,11 +56,19 @@ _STATUS_FOR = {
 class ApprovalLog:
     """Append-only approvals log for one scenario."""
 
-    def __init__(self, scenario_id: str, log_dir: str | Path = "out/logs") -> None:
+    def __init__(
+        self, scenario_id: str, log_dir: str | Path = "out/logs", fresh: bool = False
+    ) -> None:
         self.scenario_id = scenario_id
         self.log_dir = Path(log_dir)
         self.log_dir.mkdir(parents=True, exist_ok=True)
         self.path = self.log_dir / f"{scenario_id}_approvals.jsonl"
+        # A fresh run starts a new log (request ids restart at 0001, so an old
+        # file would collide); an empty file still records "zero requests".
+        if fresh:
+            self.path.write_text("", encoding="utf-8")
+        else:
+            self.path.touch(exist_ok=True)
         self.requests = 0
         # request_id -> latest decision record, so a checkpoint can read status.
         self.latest: dict[str, dict[str, Any]] = {}
@@ -114,9 +122,11 @@ class ApprovalLog:
 _log: Optional[ApprovalLog] = None
 
 
-def configure(scenario_id: str, log_dir: str | Path = "out/logs") -> ApprovalLog:
+def configure(
+    scenario_id: str, log_dir: str | Path = "out/logs", fresh: bool = False
+) -> ApprovalLog:
     global _log
-    _log = ApprovalLog(scenario_id, log_dir)
+    _log = ApprovalLog(scenario_id, log_dir, fresh=fresh)
     return _log
 
 

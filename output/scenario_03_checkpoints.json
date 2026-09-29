@@ -664,14 +664,5 @@
     "action_subtype": null,
     "hitl_status": "auto_approved",
     "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
-  },
-  {
-    "as_of_time": "2026-04-15T00:00:00Z",
-    "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   }
 ]
