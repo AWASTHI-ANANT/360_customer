@@ -479,68 +479,131 @@
   {
     "as_of_time": "2026-03-26T00:00:00Z",
     "inferred_state": "new_child_life_event",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+    "confidence_band": "high",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (high): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-03-27T00:00:00Z",
     "inferred_state": "new_child_life_event",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "confidence_band": "high",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (high): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (1d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-03-28T00:00:00Z",
     "inferred_state": "new_child_life_event",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "confidence_band": "high",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (high): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (2d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-03-29T00:00:00Z",
     "inferred_state": "new_child_life_event",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (3d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-03-30T00:00:00Z",
     "inferred_state": "new_child_life_event",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (4d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-03-31T00:00:00Z",
     "inferred_state": "new_child_life_event",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (5d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-04-01T00:00:00Z",
     "inferred_state": "new_child_life_event",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (6d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-04-02T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (7d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-03T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (8d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-04T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (9d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-05T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (10d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-06T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (11d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-07T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (12d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-08T00:00:00Z",
+    "inferred_state": "new_child_life_event",
+    "confidence_band": "medium",
+    "action": "personalized_offer",
+    "action_subtype": "childcare_savings_or_insurance_plan",
+    "hitl_status": "escalated",
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (13d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
+  },
+  {
+    "as_of_time": "2026-04-09T00:00:00Z",
     "inferred_state": "new_child_life_event",
     "confidence_band": "medium",
     "action": "no_action",
@@ -549,94 +612,31 @@
     "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
   },
   {
-    "as_of_time": "2026-04-03T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
-  },
-  {
-    "as_of_time": "2026-04-04T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
-    "as_of_time": "2026-04-05T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
-    "as_of_time": "2026-04-06T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
-    "as_of_time": "2026-04-07T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
-    "as_of_time": "2026-04-08T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
-    "as_of_time": "2026-04-09T00:00:00Z",
-    "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
-  },
-  {
     "as_of_time": "2026-04-10T00:00:00Z",
     "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
   },
   {
     "as_of_time": "2026-04-11T00:00:00Z",
     "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
   },
   {
     "as_of_time": "2026-04-12T00:00:00Z",
     "inferred_state": "new_child_life_event",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
   },
   {
     "as_of_time": "2026-04-13T00:00:00Z",
@@ -645,7 +645,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+    "notes": "new_child_life_event (low): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
   },
   {
     "as_of_time": "2026-04-14T00:00:00Z",

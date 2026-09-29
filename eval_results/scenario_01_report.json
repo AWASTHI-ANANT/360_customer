@@ -21,7 +21,7 @@
     {
       "as_of_time": "2026-02-15T00:00:00Z",
       "matched": true,
-      "state_match": false,
+      "state_match": true,
       "band_match": true,
       "band_distance": 0,
       "action_match": true,
@@ -39,18 +39,18 @@
       },
       "actual": {
         "as_of_time": "2026-02-15T00:00:00Z",
-        "inferred_state": "churn_risk",
+        "inferred_state": "medical_hardship",
         "confidence_band": "low",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000378, EVT_000380, EVT_000384"
+        "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
       }
     },
     {
       "as_of_time": "2026-03-12T00:00:00Z",
       "matched": true,
-      "state_match": false,
+      "state_match": true,
       "band_match": false,
       "band_distance": 1,
       "action_match": true,
@@ -68,12 +68,12 @@
       },
       "actual": {
         "as_of_time": "2026-03-12T00:00:00Z",
-        "inferred_state": "job_loss_or_income_disruption",
+        "inferred_state": "medical_hardship",
         "confidence_band": "low",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+        "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000436, EVT_000395 [fallback]"
       }
     },
     {
@@ -102,7 +102,7 @@
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
+        "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
       }
     }
   ],
@@ -148,7 +148,7 @@
     "checkpoints_expected": 3,
     "checkpoints_submitted": 74,
     "checkpoints_dropped": 0,
-    "state_accuracy": 0.3333333333333333,
+    "state_accuracy": 1.0,
     "band_accuracy": 0.3333333333333333,
     "avg_band_distance": 0.6666666666666666,
     "action_accuracy": 0.6666666666666666,
@@ -164,7 +164,7 @@
     "false_positive_unresolved": 0,
     "false_positive_pass_rate": 1.0,
     "false_positive_vacuous_passes": 0,
-    "overall_score": 0.43333333333333335,
+    "overall_score": 0.6333333333333333,
     "weights_applied": {
       "state_accuracy": 0.3,
       "band_accuracy": 0.2,

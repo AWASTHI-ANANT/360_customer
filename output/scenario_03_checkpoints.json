@@ -308,361 +308,361 @@
   {
     "as_of_time": "2026-03-07T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-08T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (1d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-09T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (2d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-10T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (3d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-11T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (4d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-12T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (5d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-13T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (6d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-14T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (7d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-15T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (8d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-16T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (9d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-17T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (10d ago) Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-18T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (11d ago) Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-19T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (12d ago) Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-20T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (13d ago) Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-21T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-22T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (1d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-23T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (2d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-24T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (3d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-25T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (4d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-26T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (5d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-27T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (6d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-28T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "confidence_band": "high",
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): card_activity_trend [EVT_000467]; outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (7d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-29T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (8d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-30T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (9d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-31T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (10d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-04-01T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (11d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-04-02T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (12d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-04-03T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
+    "action": "relationship_manager_escalation",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]; standing_instruction_change [EVT_000457]. carrying forward the open relationship_manager_escalation opened 2026-03-21 (13d ago) Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-04-04T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "confidence_band": "high",
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-05T00:00:00Z",
     "inferred_state": "churn_risk",
-    "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "confidence_band": "high",
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (high): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (1d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-06T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (2d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-07T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (3d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-08T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (4d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-09T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (5d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-10T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (6d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-11T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (7d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-12T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (8d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-13T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (9d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-14T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (10d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   },
   {
     "as_of_time": "2026-04-15T00:00:00Z",
     "inferred_state": "churn_risk",
     "confidence_band": "medium",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+    "action": "proactive_retention_outreach",
+    "action_subtype": "premium_retention_offer_and_fee_waiver",
+    "hitl_status": "escalated",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (11d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
   }
 ]

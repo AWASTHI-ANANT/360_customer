@@ -91,345 +91,345 @@
   },
   {
     "as_of_time": "2026-02-11T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000364, EVT_000373, EVT_000375"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392]. Evidence: EVT_000392 [fallback]"
   },
   {
     "as_of_time": "2026-02-12T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392]. Evidence: EVT_000392"
   },
   {
     "as_of_time": "2026-02-13T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392]. Evidence: EVT_000392, EVT_000395"
   },
   {
     "as_of_time": "2026-02-14T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000375, EVT_000378, EVT_000380"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-15T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000378, EVT_000380, EVT_000384"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-16T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000378, EVT_000380, EVT_000384"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-17T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000380, EVT_000384, EVT_000386"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395"
   },
   {
     "as_of_time": "2026-02-18T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000380, EVT_000384, EVT_000386"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395"
   },
   {
     "as_of_time": "2026-02-19T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000380, EVT_000384, EVT_000386"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395"
   },
   {
     "as_of_time": "2026-02-20T00:00:00Z",
-    "inferred_state": "churn_risk",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000380, EVT_000384, EVT_000386"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395"
   },
   {
     "as_of_time": "2026-02-21T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): income_pattern [EVT_000406]; merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000406, EVT_000392, EVT_000395 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000392,EVT_000395]; income_pattern [EVT_000406]. Evidence: EVT_000392, EVT_000395, EVT_000406 [fallback]"
   },
   {
     "as_of_time": "2026-02-22T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): income_pattern [EVT_000406]; merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000406, EVT_000392, EVT_000395"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000392,EVT_000395]; income_pattern [EVT_000406]. Evidence: EVT_000392, EVT_000395, EVT_000406"
   },
   {
     "as_of_time": "2026-02-23T00:00:00Z",
+    "inferred_state": "medical_hardship",
+    "confidence_band": "medium",
+    "action": "no_action",
+    "action_subtype": null,
+    "hitl_status": "auto_approved",
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000392,EVT_000395]; income_pattern [EVT_000406]. Evidence: EVT_000392, EVT_000395, EVT_000406"
+  },
+  {
+    "as_of_time": "2026-02-24T00:00:00Z",
     "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): income_pattern [EVT_000406]; merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000406, EVT_000392, EVT_000395"
-  },
-  {
-    "as_of_time": "2026-02-24T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
-    "confidence_band": "low",
-    "action": "no_action",
-    "action_subtype": null,
-    "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385 [fallback]"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-25T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-26T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-27T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-02-28T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-01T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000395]. Evidence: EVT_000392, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-02T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-03T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-04T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-05T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-06T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-07T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-08T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-09T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-10T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-11T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000436, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-12T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000392,EVT_000420]. Evidence: EVT_000392, EVT_000420, EVT_000436, EVT_000395 [fallback]"
   },
   {
     "as_of_time": "2026-03-13T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000395,EVT_000420]. Evidence: EVT_000395, EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-14T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000395,EVT_000420]. Evidence: EVT_000395, EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-15T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-16T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-17T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-18T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-19T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-20T00:00:00Z",
-    "inferred_state": "job_loss_or_income_disruption",
+    "inferred_state": "medical_hardship",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
+    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436 [fallback]"
   },
   {
     "as_of_time": "2026-03-21T00:00:00Z",
@@ -438,7 +438,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000453, EVT_000420, EVT_000436 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000453 [fallback]"
   },
   {
     "as_of_time": "2026-03-22T00:00:00Z",
@@ -447,7 +447,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000453"
   },
   {
     "as_of_time": "2026-03-23T00:00:00Z",
@@ -456,7 +456,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000453"
   },
   {
     "as_of_time": "2026-03-24T00:00:00Z",
@@ -465,7 +465,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000453"
   },
   {
     "as_of_time": "2026-03-25T00:00:00Z",
@@ -474,7 +474,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000453"
   },
   {
     "as_of_time": "2026-03-26T00:00:00Z",
@@ -483,7 +483,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-03-27T00:00:00Z",
@@ -492,7 +492,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-03-28T00:00:00Z",
@@ -501,7 +501,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-03-29T00:00:00Z",
@@ -510,7 +510,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-03-30T00:00:00Z",
@@ -519,106 +519,106 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-03-31T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000420,EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-01T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-02T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-03T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-04T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-05T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-06T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-07T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-08T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-09T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-10T00:00:00Z",
     "inferred_state": "medical_hardship",
-    "confidence_band": "low",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "medical_hardship (low): merchant_shift [EVT_000436]; life_event_hint [EVT_000462]; intent_signal [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453 [fallback]"
+    "notes": "medical_hardship (medium): merchant_shift [EVT_000420,EVT_000436]; intent_signal [EVT_000453]; life_event_hint [EVT_000453]. Evidence: EVT_000436, EVT_000462, EVT_000453"
   },
   {
     "as_of_time": "2026-04-11T00:00:00Z",

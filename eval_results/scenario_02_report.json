@@ -51,12 +51,12 @@
       "as_of_time": "2026-03-27T00:00:00Z",
       "matched": true,
       "state_match": true,
-      "band_match": false,
-      "band_distance": 1,
-      "action_match": false,
-      "hitl_match": false,
-      "timeliness": "never",
-      "subtype_match": false,
+      "band_match": true,
+      "band_distance": 0,
+      "action_match": true,
+      "hitl_match": true,
+      "timeliness": "on_time",
+      "subtype_match": true,
       "expected": {
         "inferred_state": "new_child_life_event",
         "confidence_band": "high",
@@ -69,11 +69,11 @@
       "actual": {
         "as_of_time": "2026-03-27T00:00:00Z",
         "inferred_state": "new_child_life_event",
-        "confidence_band": "medium",
-        "action": "no_action",
-        "action_subtype": null,
-        "hitl_status": "auto_approved",
-        "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
+        "confidence_band": "high",
+        "action": "personalized_offer",
+        "action_subtype": "childcare_savings_or_insurance_plan",
+        "hitl_status": "escalated",
+        "notes": "new_child_life_event (high): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. carrying forward the open personalized_offer opened 2026-03-26 (1d ago) Evidence: EVT_000373, EVT_000330, EVT_000301 [fallback]"
       }
     }
   ],
@@ -102,22 +102,22 @@
     "checkpoints_submitted": 74,
     "checkpoints_dropped": 0,
     "state_accuracy": 1.0,
-    "band_accuracy": 0.5,
-    "avg_band_distance": 0.5,
-    "action_accuracy": 0.5,
-    "hitl_accuracy": 0.0,
-    "timeliness": 0.0,
+    "band_accuracy": 1.0,
+    "avg_band_distance": 0.0,
+    "action_accuracy": 1.0,
+    "hitl_accuracy": 1.0,
+    "timeliness": 1.0,
     "timeliness_breakdown": {
-      "on_time": 0,
+      "on_time": 1,
       "early": 0,
       "late": 0,
-      "never": 1
+      "never": 0
     },
     "false_positive_checks": 1,
     "false_positive_unresolved": 0,
     "false_positive_pass_rate": 1.0,
     "false_positive_vacuous_passes": 0,
-    "overall_score": 0.625,
+    "overall_score": 1.0,
     "weights_applied": {
       "state_accuracy": 0.3,
       "band_accuracy": 0.2,

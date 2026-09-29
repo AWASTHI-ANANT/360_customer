@@ -104,7 +104,9 @@ EVIDENCE_RULES: list[dict[str, Any]] = [
     # --- spend mix ---------------------------------------------------------
     {"finding_key": "merchant_shift",
      "condition": lambda v, b: _has(v, "health"),
-     "state": "medical_hardship", "weight": 0.20},
+     # 0.20 -> 0.35 (docs/tuning_log.md): the only direct medical-cost signal,
+     # weighted like the other direct signals (SI cancel 0.30, exit transfer 0.35).
+     "state": "medical_hardship", "weight": 0.35},
     {"finding_key": "merchant_shift",
      "condition": lambda v, b: _has(v, "baby"),
      "state": "new_child_life_event", "weight": 0.20},
@@ -113,7 +115,9 @@ EVIDENCE_RULES: list[dict[str, Any]] = [
     {"finding_key": "kyc_change",
      "condition": lambda v, b: "dependents" in str(v.get("event_subtype") or v.get("event_type") or "")
      and _increased(v),
-     "state": "new_child_life_event", "weight": 0.45},
+     # 0.45 -> 0.60 (docs/tuning_log.md): a customer-declared dependents
+     # increase is the strongest single fact for this state.
+     "state": "new_child_life_event", "weight": 0.60},
     {"finding_key": "kyc_change",
      "condition": lambda v, b: "marital" in str(v.get("event_subtype") or v.get("event_type") or ""),
      "state": "marriage_or_relationship_change", "weight": 0.45},

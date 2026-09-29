@@ -46,12 +46,12 @@
       "as_of_time": "2026-03-08T00:00:00Z",
       "matched": true,
       "state_match": true,
-      "band_match": false,
-      "band_distance": 1,
-      "action_match": false,
-      "hitl_match": false,
-      "timeliness": "never",
-      "subtype_match": false,
+      "band_match": true,
+      "band_distance": 0,
+      "action_match": true,
+      "hitl_match": true,
+      "timeliness": "on_time",
+      "subtype_match": true,
       "expected": {
         "inferred_state": "churn_risk",
         "confidence_band": "high",
@@ -64,11 +64,11 @@
       "actual": {
         "as_of_time": "2026-03-08T00:00:00Z",
         "inferred_state": "churn_risk",
-        "confidence_band": "medium",
-        "action": "no_action",
-        "action_subtype": null,
-        "hitl_status": "auto_approved",
-        "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
+        "confidence_band": "high",
+        "action": "relationship_manager_escalation",
+        "action_subtype": "premium_retention_offer_and_fee_waiver",
+        "hitl_status": "escalated",
+        "notes": "churn_risk (high): outflow_pattern [EVT_000461,EVT_000460]; standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]. carrying forward the open relationship_manager_escalation opened 2026-03-07 (1d ago) Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412 [fallback]"
       }
     },
     {
@@ -77,7 +77,7 @@
       "state_match": true,
       "band_match": false,
       "band_distance": 1,
-      "action_match": false,
+      "action_match": true,
       "hitl_match": null,
       "timeliness": null,
       "subtype_match": null,
@@ -94,10 +94,10 @@
         "as_of_time": "2026-04-10T00:00:00Z",
         "inferred_state": "churn_risk",
         "confidence_band": "medium",
-        "action": "no_action",
-        "action_subtype": null,
-        "hitl_status": "auto_approved",
-        "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+        "action": "proactive_retention_outreach",
+        "action_subtype": "premium_retention_offer_and_fee_waiver",
+        "hitl_status": "escalated",
+        "notes": "churn_risk (medium): standing_instruction_change [EVT_000200,EVT_000293]; outflow_pattern [EVT_000469,EVT_000468]; card_activity_trend [EVT_000467]. carrying forward the open proactive_retention_outreach opened 2026-04-04 (6d ago) Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467 [fallback]"
       }
     }
   ],
@@ -126,22 +126,22 @@
     "checkpoints_submitted": 74,
     "checkpoints_dropped": 0,
     "state_accuracy": 1.0,
-    "band_accuracy": 0.0,
-    "avg_band_distance": 1.0,
-    "action_accuracy": 0.3333333333333333,
-    "hitl_accuracy": 0.0,
-    "timeliness": 0.0,
+    "band_accuracy": 0.3333333333333333,
+    "avg_band_distance": 0.6666666666666666,
+    "action_accuracy": 1.0,
+    "hitl_accuracy": 1.0,
+    "timeliness": 1.0,
     "timeliness_breakdown": {
-      "on_time": 0,
+      "on_time": 1,
       "early": 0,
       "late": 0,
-      "never": 1
+      "never": 0
     },
     "false_positive_checks": 1,
     "false_positive_unresolved": 0,
     "false_positive_pass_rate": 1.0,
     "false_positive_vacuous_passes": 0,
-    "overall_score": 0.48333333333333334,
+    "overall_score": 0.8666666666666667,
     "weights_applied": {
       "state_accuracy": 0.3,
       "band_accuracy": 0.2,
