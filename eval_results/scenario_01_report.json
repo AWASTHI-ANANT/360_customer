@@ -1,0 +1,178 @@
+{
+  "scenario_id": "scenario_05_major_medical_event",
+  "true_narrative": "Marcus Vance, a construction manager, experiences a sudden medical emergency in early February leading to an ER visit and subsequent hospitalization. His normal bi-weekly salary is replaced by a reduced short-term disability benefit starting late February. A large outbound transfer on Feb 5 (tuition payment) is a red herring and should not be confused for wealth drain due to medical or fraud. A refund on Feb 18 for a canceled vacation is another red herring. The medical hardship becomes explicitly clear by March when large hospital bills hit, savings are drawn down to cover expenses, and he searches for a hardship plan, eventually opening a support ticket.",
+  "signal_events": [
+    "EVT_000392",
+    "EVT_000395",
+    "EVT_000406",
+    "EVT_000420",
+    "EVT_000428",
+    "EVT_000436",
+    "EVT_000444",
+    "EVT_000445",
+    "EVT_000453",
+    "EVT_000462"
+  ],
+  "red_herring_events": [
+    "EVT_000382",
+    "EVT_000402"
+  ],
+  "checkpoint_results": [
+    {
+      "as_of_time": "2026-02-15T00:00:00Z",
+      "matched": true,
+      "state_match": false,
+      "band_match": true,
+      "band_distance": 0,
+      "action_match": true,
+      "hitl_match": null,
+      "timeliness": null,
+      "subtype_match": null,
+      "expected": {
+        "inferred_state": "medical_hardship",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": null,
+        "ideal_action_lead_time_days": null,
+        "notes": "An ER visit and a pharmacy purchase have occurred, but this could be minor. Not enough signal to infer major hardship yet."
+      },
+      "actual": {
+        "as_of_time": "2026-02-15T00:00:00Z",
+        "inferred_state": "no_significant_event",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": "auto_approved",
+        "notes": "stub baseline: no inference yet"
+      }
+    },
+    {
+      "as_of_time": "2026-03-12T00:00:00Z",
+      "matched": true,
+      "state_match": false,
+      "band_match": false,
+      "band_distance": 1,
+      "action_match": true,
+      "hitl_match": null,
+      "timeliness": null,
+      "subtype_match": null,
+      "expected": {
+        "inferred_state": "medical_hardship",
+        "confidence_band": "medium",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": null,
+        "ideal_action_lead_time_days": null,
+        "notes": "Income has dropped (benefits instead of salary) and a large hospital bill has posted. Signal is building, but waiting for explicit distress or further context is acceptable for action."
+      },
+      "actual": {
+        "as_of_time": "2026-03-12T00:00:00Z",
+        "inferred_state": "no_significant_event",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": "auto_approved",
+        "notes": "stub baseline: no inference yet"
+      }
+    },
+    {
+      "as_of_time": "2026-03-26T00:00:00Z",
+      "matched": true,
+      "state_match": false,
+      "band_match": false,
+      "band_distance": 2,
+      "action_match": false,
+      "hitl_match": false,
+      "timeliness": "never",
+      "subtype_match": false,
+      "expected": {
+        "inferred_state": "medical_hardship",
+        "confidence_band": "high",
+        "action": "support_intervention",
+        "action_subtype": "medical_hardship_payment_plan",
+        "hitl_status": "escalated",
+        "ideal_action_lead_time_days": 1,
+        "notes": "With savings drawn down and a direct support ticket requesting a payment plan due to hospitalization, the system must offer a support intervention for medical hardship. It should be escalated for human review given the complexity."
+      },
+      "actual": {
+        "as_of_time": "2026-03-26T00:00:00Z",
+        "inferred_state": "no_significant_event",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": "auto_approved",
+        "notes": "stub baseline: no inference yet"
+      }
+    }
+  ],
+  "false_positive_results": [
+    {
+      "event_id": "EVT_000382",
+      "passed": true,
+      "resolved": true,
+      "window": [
+        "2026-02-05T10:15:00Z",
+        "2026-02-08T10:15:00Z"
+      ],
+      "must_not_trigger_action": [
+        "compliance_fraud_hold",
+        "relationship_manager_escalation"
+      ],
+      "checkpoints_in_window": 3,
+      "vacuous": false,
+      "violating_checkpoints": [],
+      "notes": "Red herring: Large outbound transfer to State University. This is a tuition payment, not account takeover or sudden wealth drain requiring escalation.",
+      "reason": "no forbidden action in 3 checkpoint(s) in window"
+    },
+    {
+      "event_id": "EVT_000402",
+      "passed": true,
+      "resolved": true,
+      "window": [
+        "2026-02-18T09:00:00Z",
+        "2026-02-21T09:00:00Z"
+      ],
+      "must_not_trigger_action": [
+        "personalized_offer"
+      ],
+      "checkpoints_in_window": 3,
+      "vacuous": false,
+      "violating_checkpoints": [],
+      "notes": "Red herring: Refund from Oceanview Resort. A system mistaking this refund for a wealth windfall and firing an investment offer is scored as a false positive.",
+      "reason": "no forbidden action in 3 checkpoint(s) in window"
+    }
+  ],
+  "summary": {
+    "scenario_id": "scenario_05_major_medical_event",
+    "checkpoints_expected": 3,
+    "checkpoints_submitted": 74,
+    "checkpoints_dropped": 0,
+    "state_accuracy": 0.0,
+    "band_accuracy": 0.3333333333333333,
+    "avg_band_distance": 1.0,
+    "action_accuracy": 0.6666666666666666,
+    "hitl_accuracy": 0.0,
+    "timeliness": 0.0,
+    "timeliness_breakdown": {
+      "on_time": 0,
+      "early": 0,
+      "late": 0,
+      "never": 1
+    },
+    "false_positive_checks": 2,
+    "false_positive_unresolved": 0,
+    "false_positive_pass_rate": 1.0,
+    "false_positive_vacuous_passes": 0,
+    "overall_score": 0.3333333333333333,
+    "weights_applied": {
+      "state_accuracy": 0.3,
+      "band_accuracy": 0.2,
+      "action_accuracy": 0.25,
+      "timeliness": 0.15,
+      "false_positive_pass_rate": 0.1
+    },
+    "components_skipped": [],
+    "invalid_enum_values": []
+  }
+}

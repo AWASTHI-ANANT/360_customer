@@ -1,0 +1,131 @@
+{
+  "scenario_id": "scenario_06_new_child",
+  "true_narrative": "Priya Sharma, a marketing director with high customer value, experiences a series of life events over 8 weeks marking the birth of her second child. The timeline starts with a 40% income dip due to partial-pay maternity leave. Subsequent weeks show retail shifts (baby products), exploratory behavior (searching for education savings), and finally anchor events: a monthly daycare standing instruction and a dependents_change KYC update from 1 to 2. A large electronics purchase is a red herring (a baby monitor), verified by her own support call, and should not trigger fraud actions.",
+  "signal_events": [
+    "EVT_000301",
+    "EVT_000317",
+    "EVT_000320",
+    "EVT_000330",
+    "EVT_000341",
+    "EVT_000344",
+    "EVT_000347",
+    "EVT_000363",
+    "EVT_000365",
+    "EVT_000373",
+    "EVT_000386"
+  ],
+  "red_herring_events": [
+    "EVT_000328"
+  ],
+  "checkpoint_results": [
+    {
+      "as_of_time": "2026-02-20T00:00:00Z",
+      "matched": true,
+      "state_match": false,
+      "band_match": true,
+      "band_distance": 0,
+      "action_match": true,
+      "hitl_match": null,
+      "timeliness": null,
+      "subtype_match": null,
+      "expected": {
+        "inferred_state": "new_child_life_event",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": null,
+        "ideal_action_lead_time_days": null,
+        "notes": "An income dip and a single baby store purchase have occurred. The signal is too weak at this stage to confidently infer the life event, preventing premature promotional outreach."
+      },
+      "actual": {
+        "as_of_time": "2026-02-20T00:00:00Z",
+        "inferred_state": "no_significant_event",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": "auto_approved",
+        "notes": "stub baseline: no inference yet"
+      }
+    },
+    {
+      "as_of_time": "2026-03-27T00:00:00Z",
+      "matched": true,
+      "state_match": false,
+      "band_match": false,
+      "band_distance": 2,
+      "action_match": false,
+      "hitl_match": false,
+      "timeliness": "never",
+      "subtype_match": false,
+      "expected": {
+        "inferred_state": "new_child_life_event",
+        "confidence_band": "high",
+        "action": "personalized_offer",
+        "action_subtype": "childcare_savings_or_insurance_plan",
+        "hitl_status": "escalated",
+        "ideal_action_lead_time_days": 2,
+        "notes": "By this point, the early signals correlate strongly with the new daycare standing instruction and the KYC dependents_change. The search query adds intent. The system must confidently infer the event and route an escalated personalized offer for a savings or insurance plan."
+      },
+      "actual": {
+        "as_of_time": "2026-03-27T00:00:00Z",
+        "inferred_state": "no_significant_event",
+        "confidence_band": "low",
+        "action": "no_action",
+        "action_subtype": null,
+        "hitl_status": "auto_approved",
+        "notes": "stub baseline: no inference yet"
+      }
+    }
+  ],
+  "false_positive_results": [
+    {
+      "event_id": "EVT_000328",
+      "passed": true,
+      "resolved": true,
+      "window": [
+        "2026-02-25T11:45:00Z",
+        "2026-02-28T11:45:00Z"
+      ],
+      "must_not_trigger_action": [
+        "compliance_fraud_hold"
+      ],
+      "checkpoints_in_window": 3,
+      "vacuous": false,
+      "violating_checkpoints": [],
+      "notes": "Red herring: Large electronics purchase for a baby monitor. A system reacting purely to the sudden high-value online transaction and triggering a fraud hold is scored as a false positive, especially given the clarifying support ticket.",
+      "reason": "no forbidden action in 3 checkpoint(s) in window"
+    }
+  ],
+  "summary": {
+    "scenario_id": "scenario_06_new_child",
+    "checkpoints_expected": 2,
+    "checkpoints_submitted": 74,
+    "checkpoints_dropped": 0,
+    "state_accuracy": 0.0,
+    "band_accuracy": 0.5,
+    "avg_band_distance": 1.0,
+    "action_accuracy": 0.5,
+    "hitl_accuracy": 0.0,
+    "timeliness": 0.0,
+    "timeliness_breakdown": {
+      "on_time": 0,
+      "early": 0,
+      "late": 0,
+      "never": 1
+    },
+    "false_positive_checks": 1,
+    "false_positive_unresolved": 0,
+    "false_positive_pass_rate": 1.0,
+    "false_positive_vacuous_passes": 0,
+    "overall_score": 0.325,
+    "weights_applied": {
+      "state_accuracy": 0.3,
+      "band_accuracy": 0.2,
+      "action_accuracy": 0.25,
+      "timeliness": 0.15,
+      "false_positive_pass_rate": 0.1
+    },
+    "components_skipped": [],
+    "invalid_enum_values": []
+  }
+}
