@@ -103,6 +103,11 @@ class Hypothesis:
     supporting_events: list[str] = field(default_factory=list)
     runner_up: Optional[dict[str, Any]] = None
     notes: Optional[str] = None
+    # Written by synthesis_agent (Stage 1 decision layer).
+    rationale: Optional[str] = None
+    needs_human: bool = False
+    debate_ref: Optional[str] = None
+    used_fallback: bool = False
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -114,6 +119,10 @@ class Hypothesis:
             "supporting_events": list(self.supporting_events),
             "runner_up": self.runner_up,
             "notes": self.notes,
+            "rationale": self.rationale,
+            "needs_human": self.needs_human,
+            "debate_ref": self.debate_ref,
+            "used_fallback": self.used_fallback,
         }
 
     @classmethod
@@ -127,6 +136,10 @@ class Hypothesis:
             supporting_events=list(raw.get("supporting_events") or []),
             runner_up=raw.get("runner_up"),
             notes=raw.get("notes"),
+            rationale=raw.get("rationale"),
+            needs_human=bool(raw.get("needs_human")),
+            debate_ref=raw.get("debate_ref"),
+            used_fallback=bool(raw.get("used_fallback")),
         )
 
 
@@ -143,6 +156,10 @@ class Episode:
     outcome: Optional[str] = None
     system_action: Optional[str] = None
     notes: Optional[str] = None
+    # Machine-readable payload. `notes` stays the human sentence; anything a
+    # later agent must parse (suppression windows, debate records, the action
+    # being carried forward) belongs here instead of being regexed out of prose.
+    data: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -155,6 +172,7 @@ class Episode:
             "outcome": self.outcome,
             "system_action": self.system_action,
             "notes": self.notes,
+            "data": self.data,
         }
 
     @classmethod
@@ -169,6 +187,7 @@ class Episode:
             outcome=raw.get("outcome"),
             system_action=raw.get("system_action"),
             notes=raw.get("notes"),
+            data=raw.get("data") or {},
         )
 
 
@@ -226,6 +245,10 @@ class WorkingMemory:
         supporting_events: Optional[Sequence[str]] = None,
         runner_up: Optional[dict[str, Any]] = None,
         notes: Optional[str] = None,
+        rationale: Optional[str] = None,
+        needs_human: bool = False,
+        debate_ref: Optional[str] = None,
+        used_fallback: bool = False,
     ) -> Hypothesis:
         """Set the top hypothesis.
 
@@ -246,6 +269,10 @@ class WorkingMemory:
             supporting_events=list(supporting_events or []),
             runner_up=runner_up,
             notes=notes,
+            rationale=rationale,
+            needs_human=needs_human,
+            debate_ref=debate_ref,
+            used_fallback=used_fallback,
         )
         return self._hypothesis
 
@@ -348,6 +375,7 @@ class EpisodicMemory:
         evidence_event_ids: Optional[Sequence[str]] = None,
         notes: Optional[str] = None,
         system_action: Optional[str] = None,
+        data: Optional[dict[str, Any]] = None,
     ) -> Episode:
         """Shorthand for append(Episode(...)) with the common fields."""
         return self.append(
@@ -359,6 +387,7 @@ class EpisodicMemory:
                 evidence_event_ids=list(evidence_event_ids or []),
                 notes=notes,
                 system_action=system_action,
+                data=dict(data or {}),
             )
         )
 

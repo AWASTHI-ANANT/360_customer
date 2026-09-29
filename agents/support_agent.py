@@ -632,10 +632,14 @@ class SupportAgent(Agent):
                     "customer_id": ctx.profile.customer_id,
                     "opened_at": ctx.now(),
                     "evidence_event_ids": [event.event_id, cand.event_id],
-                    # The suppression envelope a later agent must honour.
-                    "notes": (
-                        f"suppresses={cand.event_id} until={until.isoformat()} reason={reason}"
-                    ),
+                    "notes": f"explains {cand.event_id}: {reason}",
+                    # The suppression envelope synthesis_agent.score() reads.
+                    # Structured, not prose, so nothing has to regex it back out.
+                    "data": {
+                        "suppresses": cand.event_id,
+                        "until": until.isoformat(),
+                        "reason": reason,
+                    },
                 }
             )
             ctx.log.log_agent_action(

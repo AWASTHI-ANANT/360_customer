@@ -21,7 +21,7 @@
     {
       "as_of_time": "2026-02-20T00:00:00Z",
       "matched": true,
-      "state_match": false,
+      "state_match": true,
       "band_match": true,
       "band_distance": 0,
       "action_match": true,
@@ -39,20 +39,20 @@
       },
       "actual": {
         "as_of_time": "2026-02-20T00:00:00Z",
-        "inferred_state": "no_significant_event",
+        "inferred_state": "new_child_life_event",
         "confidence_band": "low",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "stub baseline: no inference yet"
+        "notes": "new_child_life_event (low): merchant_shift [EVT_000317]; income_pattern [EVT_000301]. Evidence: EVT_000317, EVT_000301 [fallback]"
       }
     },
     {
       "as_of_time": "2026-03-27T00:00:00Z",
       "matched": true,
-      "state_match": false,
+      "state_match": true,
       "band_match": false,
-      "band_distance": 2,
+      "band_distance": 1,
       "action_match": false,
       "hitl_match": false,
       "timeliness": "never",
@@ -68,12 +68,12 @@
       },
       "actual": {
         "as_of_time": "2026-03-27T00:00:00Z",
-        "inferred_state": "no_significant_event",
-        "confidence_band": "low",
+        "inferred_state": "new_child_life_event",
+        "confidence_band": "medium",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "stub baseline: no inference yet"
+        "notes": "new_child_life_event (medium): kyc_change [EVT_000373]; life_event_hint [EVT_000330]; income_pattern [EVT_000301]. Evidence: EVT_000373, EVT_000330, EVT_000301"
       }
     }
   ],
@@ -99,11 +99,11 @@
   "summary": {
     "scenario_id": "scenario_06_new_child",
     "checkpoints_expected": 2,
-    "checkpoints_submitted": 74,
+    "checkpoints_submitted": 75,
     "checkpoints_dropped": 0,
-    "state_accuracy": 0.0,
+    "state_accuracy": 1.0,
     "band_accuracy": 0.5,
-    "avg_band_distance": 1.0,
+    "avg_band_distance": 0.5,
     "action_accuracy": 0.5,
     "hitl_accuracy": 0.0,
     "timeliness": 0.0,
@@ -117,7 +117,7 @@
     "false_positive_unresolved": 0,
     "false_positive_pass_rate": 1.0,
     "false_positive_vacuous_passes": 0,
-    "overall_score": 0.325,
+    "overall_score": 0.625,
     "weights_applied": {
       "state_accuracy": 0.3,
       "band_accuracy": 0.2,

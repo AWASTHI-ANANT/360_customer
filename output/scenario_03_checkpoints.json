@@ -6,7 +6,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "no_significant_event (low): activity remains consistent with the measured baseline [EVT_000001,EVT_000399]; no rule has matched yet."
   },
   {
     "as_of_time": "2026-02-02T00:00:00Z",
@@ -15,7 +15,7 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "no_significant_event (low): activity remains consistent with the measured baseline [EVT_000001,EVT_000399]; no rule has matched yet."
   },
   {
     "as_of_time": "2026-02-03T00:00:00Z",
@@ -24,645 +24,654 @@
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "no_significant_event (low): activity remains consistent with the measured baseline [EVT_000001,EVT_000399]; no rule has matched yet."
   },
   {
     "as_of_time": "2026-02-04T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]. Evidence: EVT_000104, EVT_000200, EVT_000293 [fallback]"
   },
   {
     "as_of_time": "2026-02-05T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]. Evidence: EVT_000104, EVT_000200, EVT_000293"
   },
   {
     "as_of_time": "2026-02-06T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000409"
   },
   {
     "as_of_time": "2026-02-07T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-02-08T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412"
   },
   {
     "as_of_time": "2026-02-09T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412"
   },
   {
     "as_of_time": "2026-02-10T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000388, EVT_000390"
   },
   {
     "as_of_time": "2026-02-11T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000388, EVT_000390"
   },
   {
     "as_of_time": "2026-02-12T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-13T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-14T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-15T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-16T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-17T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-18T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000405"
   },
   {
     "as_of_time": "2026-02-19T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-20T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-21T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-22T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-23T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-24T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-25T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-26T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-27T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000104,EVT_000200]; relationship_damage [EVT_000412]; sentiment_state [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-02-28T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]; engagement_trend [EVT_000431]; relationship_damage [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-01T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]; engagement_trend [EVT_000431]; relationship_damage [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000431, EVT_000412"
   },
   {
     "as_of_time": "2026-03-02T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]; engagement_trend [EVT_000431]; relationship_damage [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000431, EVT_000453"
   },
   {
     "as_of_time": "2026-03-03T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]; engagement_trend [EVT_000431]; relationship_damage [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000431, EVT_000453"
   },
   {
     "as_of_time": "2026-03-04T00:00:00Z",
-    "inferred_state": "no_significant_event",
+    "inferred_state": "churn_risk",
     "confidence_band": "low",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (low): standing_instruction_change [EVT_000104,EVT_000200]; engagement_trend [EVT_000431]; relationship_damage [EVT_000412]. Evidence: EVT_000104, EVT_000200, EVT_000293, EVT_000412, EVT_000431, EVT_000453"
   },
   {
     "as_of_time": "2026-03-05T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000457, EVT_000453, EVT_000412 [fallback]"
   },
   {
     "as_of_time": "2026-03-06T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-07T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-08T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-09T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-10T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-11T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-12T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-13T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-14T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-15T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, EVT_000453, EVT_000412"
   },
   {
     "as_of_time": "2026-03-16T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-17T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-18T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-19T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-20T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000467, EVT_000461, EVT_000460, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-21T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-22T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-23T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-24T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-25T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-26T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-27T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-28T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-29T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-30T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-03-31T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-04-01T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-04-02T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-04-03T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000469, EVT_000468, EVT_000467, EVT_000457, baseline, EVT_000412"
   },
   {
     "as_of_time": "2026-04-04T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-05T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-06T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-07T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-08T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-09T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-10T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-11T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-12T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-13T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-14T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   },
   {
     "as_of_time": "2026-04-15T00:00:00Z",
-    "inferred_state": "no_significant_event",
-    "confidence_band": "low",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
     "action": "no_action",
     "action_subtype": null,
     "hitl_status": "auto_approved",
-    "notes": "stub baseline: no inference yet"
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
+  },
+  {
+    "as_of_time": "2026-04-15T00:00:00Z",
+    "inferred_state": "churn_risk",
+    "confidence_band": "medium",
+    "action": "no_action",
+    "action_subtype": null,
+    "hitl_status": "auto_approved",
+    "notes": "churn_risk (medium): standing_instruction_change [EVT_000457]; engagement_trend [EVT_000453]; relationship_damage [EVT_000412]. Evidence: EVT_000200, EVT_000293, EVT_000451, EVT_000469, EVT_000468, EVT_000467"
   }
 ]

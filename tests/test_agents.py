@@ -393,11 +393,21 @@ def test_full_run(tmp: Path) -> list[Finding]:
     from c360.memory_store import MemoryStore
 
     mem = MemoryStore(load_scenario(SCENARIO).customer_id, memory_dir=tmp / "memory").load()
-    check("no agent set a hypothesis", mem.working.get_hypothesis() is None)
-    forbidden = {"inferred_state", "action", "hitl_status"}
+    # Stage 1 added the decision layer, so a hypothesis and a current_decision
+    # now legitimately exist. The invariant that still matters is narrower: the
+    # SWARM agents (signal, support) must never decide a state or an action.
+    check("synthesis owns the hypothesis", mem.working.get_hypothesis() is not None)
+    forbidden = {"inferred_state", "action", "hitl_status", "confidence_band"}
+    offenders = [
+        (f.agent, f.key)
+        for f in trace
+        if f.agent in ("signal_agent", "support_agent")
+        and not forbidden.isdisjoint(f.value.keys())
+    ]
+    check("swarm agents write no decision fields", not offenders, str(offenders[:3]))
     check(
-        "no finding value contains a decision field",
-        all(forbidden.isdisjoint(f.value.keys()) for f in trace),
+        "only action_agent writes current_decision",
+        {f.agent for f in trace if f.key == "current_decision"} <= {"action_agent"},
     )
     check("episodes were opened for medium/high findings", len(mem.episodic) > 0)
     check(

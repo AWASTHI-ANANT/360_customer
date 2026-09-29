@@ -39,12 +39,12 @@
       },
       "actual": {
         "as_of_time": "2026-02-15T00:00:00Z",
-        "inferred_state": "no_significant_event",
+        "inferred_state": "churn_risk",
         "confidence_band": "low",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "stub baseline: no inference yet"
+        "notes": "churn_risk (low): standing_instruction_change [EVT_000102,EVT_000193]. Evidence: EVT_000102, EVT_000193, EVT_000289, EVT_000378, EVT_000380, EVT_000384"
       }
     },
     {
@@ -68,20 +68,20 @@
       },
       "actual": {
         "as_of_time": "2026-03-12T00:00:00Z",
-        "inferred_state": "no_significant_event",
+        "inferred_state": "job_loss_or_income_disruption",
         "confidence_band": "low",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "stub baseline: no inference yet"
+        "notes": "job_loss_or_income_disruption (low): income_pattern [EVT_000385]. Evidence: EVT_000385"
       }
     },
     {
       "as_of_time": "2026-03-26T00:00:00Z",
       "matched": true,
-      "state_match": false,
+      "state_match": true,
       "band_match": false,
-      "band_distance": 2,
+      "band_distance": 1,
       "action_match": false,
       "hitl_match": false,
       "timeliness": "never",
@@ -97,12 +97,12 @@
       },
       "actual": {
         "as_of_time": "2026-03-26T00:00:00Z",
-        "inferred_state": "no_significant_event",
-        "confidence_band": "low",
+        "inferred_state": "medical_hardship",
+        "confidence_band": "medium",
         "action": "no_action",
         "action_subtype": null,
         "hitl_status": "auto_approved",
-        "notes": "stub baseline: no inference yet"
+        "notes": "medical_hardship (medium): intent_signal [EVT_000453]; life_event_hint [EVT_000453]; merchant_shift [EVT_000420,EVT_000436]. Evidence: EVT_000420, EVT_000436, EVT_000462, EVT_000453"
       }
     }
   ],
@@ -146,11 +146,11 @@
   "summary": {
     "scenario_id": "scenario_05_major_medical_event",
     "checkpoints_expected": 3,
-    "checkpoints_submitted": 74,
+    "checkpoints_submitted": 75,
     "checkpoints_dropped": 0,
-    "state_accuracy": 0.0,
+    "state_accuracy": 0.3333333333333333,
     "band_accuracy": 0.3333333333333333,
-    "avg_band_distance": 1.0,
+    "avg_band_distance": 0.6666666666666666,
     "action_accuracy": 0.6666666666666666,
     "hitl_accuracy": 0.0,
     "timeliness": 0.0,
@@ -164,7 +164,7 @@
     "false_positive_unresolved": 0,
     "false_positive_pass_rate": 1.0,
     "false_positive_vacuous_passes": 0,
-    "overall_score": 0.3333333333333333,
+    "overall_score": 0.43333333333333335,
     "weights_applied": {
       "state_accuracy": 0.3,
       "band_accuracy": 0.2,

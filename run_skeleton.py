@@ -21,8 +21,10 @@ import logging
 import sys
 from pathlib import Path
 
-from agents import SignalAgent, SupportAgent
+import hitl
+from agents import ActionAgent, SignalAgent, SupportAgent, SynthesisAgent
 from agents.base import AgentContext, Finding
+from output import CheckpointWriter
 from c360 import (
     DailyLogWriter,
     EventStore,
@@ -45,6 +47,8 @@ def run_one(
     speed: float | None = None,
     fresh: bool = True,
     show_findings: bool = False,
+    mode: str = "auto",
+    inject: Path | None = None,
 ) -> dict:
     scn = load_scenario(scenario_id, data_root=data_root)
     print(f"\n=== {scn.scenario_id} | {scn.profile.name} ({scn.customer_id}) ===")
@@ -67,6 +71,13 @@ def run_one(
     if fresh:
         writer.truncate_and_restart()
 
+    # --inject splices synthetic events into a COPY of the live stream, in
+    # event_time order; the scenario folder on disk is never modified.
+    live_events = list(scn.live_events)
+    if inject is not None:
+        live_events = _inject(live_events, inject, scn)
+        print(f"    injected {len(live_events) - len(scn.live_events)} events from {inject}")
+
     # History seeds the event store, so a 14-day window on day 1 of the live
     # stream still sees the customer's ordinary behaviour behind it.
     store = EventStore(scn.customer_id, scn.history_events)
@@ -74,13 +85,18 @@ def run_one(
     llm_client.configure(
         scn.scenario_id, cache_dir=out_dir / "llm_cache", trace_dir=out_dir / "logs"
     )
+    hitl.configure(scn.scenario_id, log_dir=out_dir / "logs")
+    checkpoints = CheckpointWriter(scn.scenario_id, output_dir=ROOT / "output")
     reason = llm_client.unavailable_reason()
     print(f"    llm: {'offline -- ' + reason if reason else 'available (' + llm_client.get_client().model + ')'}")
 
     ctx = AgentContext(
         memory=memory, log=writer, profile=scn.profile, event_store=store, clock=clock
     )
-    agents = [SignalAgent(), SupportAgent()]
+    # Order matters at the day boundary: signal -> synthesis -> action.
+    signal, support = SignalAgent(), SupportAgent()
+    synthesis, action = SynthesisAgent(), ActionAgent(mode=mode)
+    agents = [signal, support, synthesis, action]
 
     # Every finding emitted during the run, for the eyeball list and the tests.
     trace: list[Finding] = []
@@ -99,16 +115,20 @@ def run_one(
     @clock.on_day_boundary
     def _on_day(sim_date):
         writer.log_day_boundary(sim_date, clock.events_in_previous_day)
+        # signal -> synthesis -> action, then the checkpoint for the day.
         for agent in agents:
             trace.extend(agent.on_day_boundary(sim_date, ctx))
+        checkpoints.write(sim_date, memory)
         memory.save()
 
     with writer:
         clock.run(
-            scn.live_events,
+            live_events,
             realtime=realtime,
             **({"speed_seconds_per_day": speed} if realtime and speed else {}),
         )
+        # One final checkpoint at simulated_end so the last state is always scored.
+        checkpoints.write(scn.replay_config.simulated_end, memory)
         memory.save()
 
     empty_days = sum(1 for n in clock.event_counts.values() if n == 0)
@@ -124,7 +144,32 @@ def run_one(
                 f" skipped_unconsented={agent.skipped_unconsented})"
             )
         print(f"    {agent.name}: {agent.findings_emitted} findings{extra}")
-    print(f"    findings total {len(trace)}, episodes {len(memory.episodic)}")
+    hypothesis = memory.working.get_hypothesis()
+    print(
+        f"    findings total {len(trace)}, episodes {len(memory.episodic)}, "
+        f"checkpoints {len(checkpoints)}"
+    )
+    if hypothesis is not None:
+        print(
+            f"    final hypothesis: {hypothesis.state} [{hypothesis.confidence_band}] "
+            f"score={hypothesis.score:.3f}"
+            + (" (fallback)" if hypothesis.used_fallback else "")
+        )
+    final = checkpoints.latest()
+    if final is not None:
+        print(
+            f"    final checkpoint : {final['inferred_state']} / {final['action']}"
+            f" / {final['hitl_status']}"
+        )
+    print(
+        f"    synthesis: {synthesis.debates} debates, {synthesis.reviews} reviews, "
+        f"llm={synthesis.llm_calls} fallback={synthesis.fallback_calls}"
+    )
+    print(
+        f"    action   : llm={action.llm_calls} fallback={action.fallback_calls} "
+        f"revisions={action.revisions}"
+    )
+    print(f"    checkpoints -> {checkpoints.path}")
     print(f"    log    -> {writer.path}")
     print(f"    memory -> {memory.working_path}")
     if store.late_insertions:
@@ -138,12 +183,40 @@ def run_one(
     return {
         "scenario_id": scn.scenario_id,
         "events": clock.events_dispatched,
-        "expected_events": len(scn.live_events),
+        "expected_events": len(live_events),
+        "checkpoints": checkpoints.checkpoints,
+        "checkpoint_path": str(checkpoints.path),
+        "hypothesis": hypothesis,
         "days": clock.days_dispatched,
         "findings": len(trace),
         "episodes": len(memory.episodic),
         "trace": trace,
     }
+
+
+def _inject(live_events, fixture: Path, scn):
+    """Merge a JSONL fixture into the live stream, in event_time order.
+
+    The scenario folder is never touched; this builds a new in-memory list, so
+    an injected run and a clean run can be compared directly.
+    """
+    import json as _json
+
+    from c360.derive import derive
+    from c360.loader import Event
+
+    extra = []
+    for lineno, line in enumerate(fixture.read_text(encoding="utf-8").splitlines(), 1):
+        line = line.strip()
+        if not line or line.startswith("//"):
+            continue
+        try:
+            extra.append(derive(Event.from_json(_json.loads(line), stream="live"), scn.profile))
+        except (ValueError, KeyError, _json.JSONDecodeError) as exc:
+            print(f"    ! {fixture.name}:{lineno} skipped ({exc})")
+    merged = list(live_events) + extra
+    merged.sort(key=lambda e: (e.event_time, e.event_id))
+    return merged
 
 
 def print_findings(trace: list[Finding]) -> None:
@@ -172,6 +245,12 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--speed", type=float, default=None, help="override seconds per simulated day")
     ap.add_argument("--keep", action="store_true", help="append to existing log/memory")
     ap.add_argument("--findings", action="store_true", help="print every finding emitted")
+    ap.add_argument("--interactive", action="store_true",
+                    help="ask a human to approve each action (default: --auto)")
+    ap.add_argument("--auto", action="store_true", default=True,
+                    help="never ask a human; actions stay 'escalated' (default)")
+    ap.add_argument("--inject", type=Path, default=None,
+                    help="splice a JSONL fixture into a copy of the live stream")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
 
@@ -189,6 +268,8 @@ def main(argv: list[str] | None = None) -> int:
         run_one(
             s, args.data_root, args.out_dir, args.realtime, args.speed,
             fresh=not args.keep, show_findings=args.findings,
+            mode="interactive" if args.interactive else "auto",
+            inject=args.inject,
         )
         for s in scenarios
     ]
@@ -201,7 +282,8 @@ def main(argv: list[str] | None = None) -> int:
         print(
             f"  {r['scenario_id']:12} events {r['events']}/{r['expected_events']} "
             f"{'OK' if complete else 'MISMATCH'}  days={r['days']}  "
-            f"findings={r['findings']}  episodes={r['episodes']}"
+            f"findings={r['findings']}  episodes={r['episodes']}  "
+            f"checkpoints={len(r['checkpoints'])}"
         )
     return 0 if ok else 1
 

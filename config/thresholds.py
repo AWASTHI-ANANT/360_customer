@@ -61,3 +61,39 @@ SUPPRESSION_DURATION_HOURS = 72
 # --- support agent memory context -------------------------------------------
 # How far back to summarise this customer's own tickets for the prompt.
 SUPPORT_HISTORY_DAYS = 30
+
+
+# ============================================================================
+# Decision layer (synthesis -> action -> checkpoint)
+# ============================================================================
+
+# --- confidence banding -----------------------------------------------------
+# Upper bounds on the synthesis score for each outcome. A score at or below
+# NO_EVENT_MAX means nothing is happening; above MEDIUM_MAX is "high".
+NO_EVENT_MAX = 0.15
+LOW_MAX = 0.45
+MEDIUM_MAX = 0.75
+
+# Evidence decays with age: a finding's weight halves every this many
+# simulated days, so a stale signal cannot hold a state up indefinitely.
+EVIDENCE_HALF_LIFE_DAYS = 30
+
+# --- conflicting hypotheses -------------------------------------------------
+# Two candidate states conflict when the runner-up is within CONFLICT_MARGIN of
+# the leader and itself scores at least CONFLICT_MIN_SCORE. That is what sends
+# the decision to adjudication rather than taking the top score on faith.
+CONFLICT_MARGIN = 0.15
+CONFLICT_MIN_SCORE = 0.30
+
+# --- action pacing ----------------------------------------------------------
+# Do not fire the same action at a customer again inside this window.
+ACTION_COOLDOWN_DAYS = 14
+# How long an escalation stays open before a follow-up is due.
+ESCALATION_FOLLOWUP_DAYS = 21
+
+# --- action limits ----------------------------------------------------------
+# Maximum monetary value of a retention credit, by customer_value_tier.
+RETENTION_CREDIT_CAP = {"low": 50, "mid": 150, "high": 500}
+
+# A fraud action is never taken on a weaker band than this.
+FRAUD_ACTION_MIN_BAND = "medium"

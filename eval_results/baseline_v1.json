@@ -1,0 +1,85 @@
+{
+  "baseline_id": "baseline_v1",
+  "generated_at": "2026-09-29T13:15:24.888624+00:00",
+  "mode": "offline (C360_LLM_OFFLINE=1)",
+  "note": "Stage 1 decision layer. Stage 2's regression test asserts these scores and checkpoint hashes are unchanged, and that zero guardrail rules fire on these three scenarios.",
+  "scenarios": {
+    "scenario_01": {
+      "ground_truth_scenario_id": "scenario_05_major_medical_event",
+      "summary": {
+        "state_accuracy": 0.3333333333333333,
+        "band_accuracy": 0.3333333333333333,
+        "avg_band_distance": 0.6666666666666666,
+        "action_accuracy": 0.6666666666666666,
+        "hitl_accuracy": 0.0,
+        "timeliness": 0.0,
+        "false_positive_pass_rate": 1.0,
+        "overall_score": 0.43333333333333335,
+        "checkpoints_expected": 3,
+        "checkpoints_submitted": 75
+      },
+      "timeliness_breakdown": {
+        "on_time": 0,
+        "early": 0,
+        "late": 0,
+        "never": 1
+      },
+      "checkpoint_count": 75,
+      "checkpoint_sha256": "34599c0670678802c9aef9e0bbcb46ab62d20e5cef4ebd303dbd87a0b1b17338"
+    },
+    "scenario_02": {
+      "ground_truth_scenario_id": "scenario_06_new_child",
+      "summary": {
+        "state_accuracy": 1.0,
+        "band_accuracy": 0.5,
+        "avg_band_distance": 0.5,
+        "action_accuracy": 0.5,
+        "hitl_accuracy": 0.0,
+        "timeliness": 0.0,
+        "false_positive_pass_rate": 1.0,
+        "overall_score": 0.625,
+        "checkpoints_expected": 2,
+        "checkpoints_submitted": 75
+      },
+      "timeliness_breakdown": {
+        "on_time": 0,
+        "early": 0,
+        "late": 0,
+        "never": 1
+      },
+      "checkpoint_count": 75,
+      "checkpoint_sha256": "d9e25dc92d812b767612f0c3b5d34f35d53723e18b39f494c082944ca867450c"
+    },
+    "scenario_03": {
+      "ground_truth_scenario_id": "scenario_07_churn_risk",
+      "summary": {
+        "state_accuracy": 1.0,
+        "band_accuracy": 0.0,
+        "avg_band_distance": 1.0,
+        "action_accuracy": 0.3333333333333333,
+        "hitl_accuracy": 0.0,
+        "timeliness": 0.0,
+        "false_positive_pass_rate": 1.0,
+        "overall_score": 0.48333333333333334,
+        "checkpoints_expected": 3,
+        "checkpoints_submitted": 75
+      },
+      "timeliness_breakdown": {
+        "on_time": 0,
+        "early": 0,
+        "late": 0,
+        "never": 1
+      },
+      "checkpoint_count": 75,
+      "checkpoint_sha256": "b5b4c51e9709939beac99348eeb2724c16f5b2c9e09d7cb98cd7979de7da2920"
+    }
+  },
+  "mean": {
+    "state_accuracy": 0.7777777777777778,
+    "band_accuracy": 0.27777777777777773,
+    "action_accuracy": 0.5,
+    "timeliness": 0.0,
+    "false_positive_pass_rate": 1.0,
+    "overall_score": 0.513888888888889
+  }
+}
