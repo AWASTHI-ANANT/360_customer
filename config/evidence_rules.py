@@ -8,7 +8,8 @@ ASSUMPTIONS (spec was silent):
   finding_key contributes AT MOST ONCE per state per scoring pass. Repeated
   emissions of the same key over the run do not stack.
 - `merchant_shift` categories are matched against the finding's `risen` and
-  `new` category names, case-insensitively, by substring.
+  `new` category names by normalised group (config/categories.py), not by
+  exact name.
 - An unrecognised mcc_category or life-event label is logged once and ignored;
   it never raises (per spec: "Unknown category names are logged, never crash").
 """
@@ -18,25 +19,19 @@ from __future__ import annotations
 import logging
 from typing import Any, Callable
 
+from config.categories import category_group
+
 log = logging.getLogger(__name__)
 
-# Category name fragments used by the merchant_shift rules.
-MEDICAL_CATEGORY_TOKENS = ("healthcare", "pharmacy", "hospital", "medical", "clinic", "dental")
-CHILD_CATEGORY_TOKENS = ("baby", "child", "nursery", "toys", "maternity")
 
 # transaction_type fragments that mean income was replaced by a benefit.
 BENEFIT_TOKENS = ("benefit", "disability")
 
 
-def _cats(value: dict[str, Any]) -> str:
-    """All category names mentioned by a merchant_shift finding, lowercased."""
+def _has(value: dict[str, Any], group: str) -> bool:
+    """A merchant_shift finding's risen or new categories include `group`."""
     names = list((value.get("risen") or {}).keys()) + list((value.get("new") or {}).keys())
-    return " ".join(str(n).lower() for n in names)
-
-
-def _has(value: dict[str, Any], tokens: tuple[str, ...]) -> bool:
-    blob = _cats(value)
-    return any(tok in blob for tok in tokens)
+    return any(category_group(n) == group for n in names)
 
 
 def _kind(value: dict[str, Any]) -> str:
@@ -108,10 +103,10 @@ EVIDENCE_RULES: list[dict[str, Any]] = [
 
     # --- spend mix ---------------------------------------------------------
     {"finding_key": "merchant_shift",
-     "condition": lambda v, b: _has(v, MEDICAL_CATEGORY_TOKENS),
+     "condition": lambda v, b: _has(v, "health"),
      "state": "medical_hardship", "weight": 0.20},
     {"finding_key": "merchant_shift",
-     "condition": lambda v, b: _has(v, CHILD_CATEGORY_TOKENS),
+     "condition": lambda v, b: _has(v, "baby"),
      "state": "new_child_life_event", "weight": 0.20},
 
     # --- declared facts (KYC) ---------------------------------------------

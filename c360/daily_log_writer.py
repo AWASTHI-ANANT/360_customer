@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any, Optional, Sequence
 
 from .loader import CustomerProfile, Event, iso
-from .masking import mask
+from .masking import mask, pseudonymize_account
 
 log = logging.getLogger(__name__)
 
@@ -164,7 +164,7 @@ class DailyLogWriter:
                 "timestamp": iso(event.event_time),
                 "ingestion_time": iso(event.ingestion_time),
                 "event_id": event.event_id,
-                "account_id": event.account_id,
+                "account_id": pseudonymize_account(event.account_id),
                 "source_system": event.source_system,
                 "event_type": event.event_type,
                 "summary": mask(summarize_event(event), self.profile)[0],

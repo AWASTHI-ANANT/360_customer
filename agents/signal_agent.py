@@ -58,19 +58,28 @@ from typing import Any, Optional, Sequence
 
 from c360.loader import Event
 from config import thresholds as T
+from config.categories import category_group, normalise
 
 from .base import Agent, AgentContext, Finding
 
 log = logging.getLogger(__name__)
 
-# mcc_category values seen in the shipped scenarios. Anything else is logged
-# (the brief asks for it) but still scored -- we never drop an unknown category.
+# mcc_category values with no life-event group. Anything that is neither
+# grouped (config/categories.py) nor listed here is logged (the brief asks for
+# it) but still scored -- we never drop an unknown category. Compared after
+# normalise(), so "groceries"/"grocery" and "baby_supplies"/"baby_products"
+# are both recognised.
 KNOWN_MCC_CATEGORIES = {
-    "groceries", "dining", "gas", "general_retail", "pharmacy", "healthcare",
-    "utilities", "entertainment", "travel", "transport", "transit",
-    "home_improvement", "childcare", "education", "insurance", "subscriptions",
-    "clothing", "electronics", "hardware", "baby_supplies", "medical", "hospital",
+    normalise(c) for c in (
+        "dining", "gas", "general_retail", "utilities", "entertainment", "travel",
+        "transport", "transit", "home_improvement", "education", "insurance",
+        "subscriptions", "clothing", "electronics", "hardware", "lodging",
+    )
 }
+
+
+def is_known_category(name: str) -> bool:
+    return category_group(name) is not None or normalise(name) in KNOWN_MCC_CATEGORIES
 
 HANDLED_SOURCES = {
     "card_payments",
@@ -679,7 +688,7 @@ class SignalAgent(Agent):
         evidence: list[str] = []
         for cat, spend in recent.items():
             share = spend / total
-            if cat not in KNOWN_MCC_CATEGORIES and cat not in self._unknown_categories:
+            if not is_known_category(cat) and cat not in self._unknown_categories:
                 self._unknown_categories.add(cat)
                 log.warning("unrecognised mcc_category %r (first seen %s)", cat, sim_date)
             prior = base.get(cat)

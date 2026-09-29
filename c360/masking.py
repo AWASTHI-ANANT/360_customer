@@ -70,6 +70,22 @@ def mask(text: Optional[str], profile: Optional[CustomerProfile] = None) -> tupl
     return out, mapping
 
 
+def pseudonymize_account(account_id: Optional[str]) -> Optional[str]:
+    """ACC_CHK_003 -> 'acct:chk:<hash8>': stable across a run, no raw id.
+
+    Keeps the account type (useful when reading a log) and a short hash so two
+    accounts stay distinguishable. Used for structured fields, where the
+    per-call [ACCOUNT_n] numbering of mask() would make every account look the same.
+    """
+    if not account_id:
+        return account_id
+    import hashlib
+
+    parts = str(account_id).split("_")
+    kind = parts[1].lower() if len(parts) > 2 else "acct"
+    return f"acct:{kind}:{hashlib.sha256(str(account_id).encode()).hexdigest()[:8]}"
+
+
 def unmask(text: str, mapping: dict[str, str]) -> str:
     """Restore originals, for auditing a trace."""
     out = text
