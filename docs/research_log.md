@@ -147,6 +147,5 @@ not from anything I read:
 
 I used Claude (chat) to understand the problem, study the dataset, compare design
 options and write specifications, and Claude Code to write and test the code.
-Thresholds and weights were tuned on the three practice scenarios. Every change
-is recorded in `docs/tuning_log.md`, and overfitting to those scenarios is a known
-limitation.
+Thresholds and weights were tuned on the three practice scenarios, and
+overfitting to those scenarios is a known limitation.

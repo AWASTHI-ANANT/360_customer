@@ -15,3 +15,6 @@ out/
 # Kept in git deliberately (submission artifacts, not run noise):
 #   output/       -- checkpoint files scored by eval/run_eval.py
 #   eval_results/ -- scoring reports for the evaluation write-up
+
+# Local calibration notes, not published
+docs/tuning_log.md

@@ -72,7 +72,7 @@ SUPPORT_HISTORY_DAYS = 30
 # NO_EVENT_MAX means nothing is happening; above MEDIUM_MAX is "high".
 NO_EVENT_MAX = 0.15
 LOW_MAX = 0.45
-# 0.75 -> 0.62 (docs/tuning_log.md): with 30-day decay, 0.75 needed three
+# 0.75 -> 0.62: with 30-day decay, 0.75 needed three
 # fresh strong signals and was never reached, so no action could ever fire.
 MEDIUM_MAX = 0.62
 
