@@ -75,6 +75,7 @@ from config.evidence_rules import (
 )
 
 from .base import Agent, AgentContext, Finding
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -217,6 +218,7 @@ class SynthesisAgent(Agent):
 
     # --- main pass ----------------------------------------------------------
 
+    @traced("agent")
     def on_day_boundary(self, sim_date: date, ctx: AgentContext) -> list[Finding]:
         findings = ctx.memory.working.all_findings()
         newest = max(

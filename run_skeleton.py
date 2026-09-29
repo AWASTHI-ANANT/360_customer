@@ -7,7 +7,9 @@
     python run_skeleton.py -s scenario_03 --realtime --speed 0.05   # demo pacing
 
 Wiring, per event:   derive (at load) -> event_store.add -> log_event -> every
-                     agent whose handles() is true
+                     agent whose handles() is true, guardrail_agent FIRST; if a
+                     guardrail rule fired, the hold is applied and a checkpoint
+                     is written at the event's own time
 Wiring, per day:     agent.on_day_boundary(...) for each agent -> memory.save()
 
 SignalAgent and SupportAgent run independently and never read each other's
@@ -22,7 +24,10 @@ import sys
 from pathlib import Path
 
 import hitl
+import tracing
 from agents import ActionAgent, SignalAgent, SupportAgent, SynthesisAgent
+from agents.guardrail_agent import GuardrailAgent
+from config import guardrail_rules as GR
 from agents.base import AgentContext, Finding
 from output import CheckpointWriter
 from c360 import (
@@ -57,6 +62,7 @@ def run_one(
     perturb: bool = False,
     perturb_seed: int = PERTURB_SEED,
     checkpoint_dir: Path | None = None,
+    guardrails: bool | None = None,
 ) -> dict:
     scn = load_scenario(scenario_id, data_root=data_root)
     print(f"\n=== {scn.scenario_id} | {scn.profile.name} ({scn.customer_id}) ===")
@@ -100,17 +106,23 @@ def run_one(
         scn.scenario_id, cache_dir=out_dir / "llm_cache", trace_dir=out_dir / "logs"
     )
     hitl.configure(scn.scenario_id, log_dir=out_dir / "logs", fresh=fresh)
-    checkpoints = CheckpointWriter(scn.scenario_id, output_dir=checkpoint_dir or ROOT / "output")
+    guardrails = GR.GUARDRAILS_ENABLED if guardrails is None else guardrails
+    tracing.configure(scn.scenario_id, out_dir / "logs", clock=clock, profile=scn.profile,
+                      fresh=fresh)
+    checkpoints = CheckpointWriter(scn.scenario_id, output_dir=checkpoint_dir or ROOT / "output",
+                                   guardrails=guardrails)
     reason = llm_client.unavailable_reason()
     print(f"    llm: {'offline -- ' + reason if reason else 'available (' + llm_client.get_client().model + ')'}")
 
     ctx = AgentContext(
         memory=memory, log=writer, profile=scn.profile, event_store=store, clock=clock
     )
-    # Order matters at the day boundary: signal -> synthesis -> action.
+    # Order matters: guardrail first on every event; at the day boundary
+    # signal -> synthesis -> action.
     signal, support = SignalAgent(), SupportAgent()
     synthesis, action = SynthesisAgent(), ActionAgent(mode=mode)
-    agents = [signal, support, synthesis, action]
+    guardrail = GuardrailAgent() if guardrails else None
+    agents = ([guardrail] if guardrail else []) + [signal, support, synthesis, action]
 
     # Every finding emitted during the run, for the eyeball list and the tests.
     trace: list[Finding] = []
@@ -119,14 +131,23 @@ def run_one(
         trace.extend(agent.on_start(ctx, scn.history_events))
 
     @clock.on_event
+    @tracing.traced("event", name="replay.event")
     def _on_event(event):
         store.add(event)
         writer.log_event(event)
         for agent in agents:
             if agent.handles(event):
                 trace.extend(agent.on_event(event, ctx))
+        if guardrail is not None and guardrail.pending is not None:
+            # A hold takes effect now, not at the next midnight.
+            guardrail.pending = None
+            trace.extend(action.apply_guardrail_now(ctx))
+            last = checkpoints.latest()
+            if last is None or last["as_of_time"] < iso(event.event_time):
+                checkpoints.write(event.event_time, memory)
 
     @clock.on_day_boundary
+    @tracing.traced("day", name="replay.day")
     def _on_day(sim_date):
         writer.log_day_boundary(sim_date, clock.events_in_previous_day)
         # signal -> synthesis -> action, then the checkpoint for the day.
@@ -194,6 +215,12 @@ def run_one(
         print(f"    late/out-of-order events reinserted in place: {store.late_insertions}")
     if clock.callback_errors:
         print(f"    !! callback errors: {clock.callback_errors}")
+    fires = guardrail.fires if guardrail else []
+    print(f"    guardrails: {'on' if guardrails else 'off'}, {len(fires)} fire(s), "
+          f"{len(checkpoints.vetoes)} veto(es)")
+    for f in fires:
+        print(f"      {f['rule_id']} on {f['triggered_by']} -> {f['forced_action']}")
+    tracing.disable()
 
     if show_findings:
         print_findings(trace)
@@ -209,6 +236,8 @@ def run_one(
         "findings": len(trace),
         "episodes": len(memory.episodic),
         "trace": trace,
+        "guardrail_fires": fires,
+        "vetoes": list(checkpoints.vetoes),
     }
 
 
@@ -301,6 +330,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--seed", type=int, default=PERTURB_SEED, help="seed for --perturb")
     ap.add_argument("--checkpoint-dir", type=Path, default=ROOT / "output",
                     help="where {scenario}_checkpoints.json is written")
+    ap.add_argument("--no-guardrails", action="store_true",
+                    help="run without the guardrail agent and output veto")
     ap.add_argument("-v", "--verbose", action="store_true")
     args = ap.parse_args(argv)
 
@@ -321,6 +352,7 @@ def main(argv: list[str] | None = None) -> int:
             mode="interactive" if args.interactive else "auto",
             inject=args.inject, perturb=args.perturb, perturb_seed=args.seed,
             checkpoint_dir=args.checkpoint_dir,
+            guardrails=False if args.no_guardrails else None,
         )
         for s in scenarios
     ]

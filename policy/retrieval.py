@@ -23,6 +23,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Optional
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -142,6 +143,7 @@ def load(policy_dir: str | Path | None = None, refresh: bool = False) -> list[Po
     return chunks
 
 
+@traced("retrieval")
 def retrieve(state: str, k: int = 6, policy_dir: str | Path | None = None) -> list[PolicyChunk]:
     """Policy chunks relevant to one inferred_state, best first.
 

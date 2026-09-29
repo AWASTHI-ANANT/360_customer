@@ -66,6 +66,7 @@ from config.enums import VALID_ACTIONS, VALID_HITL
 from policy import retrieval
 
 from .base import Agent, AgentContext, Finding
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -138,6 +139,7 @@ class ActionAgent(Agent):
 
     # --- main pass ----------------------------------------------------------
 
+    @traced("agent")
     def on_day_boundary(self, sim_date: date, ctx: AgentContext) -> list[Finding]:
         hypothesis = ctx.memory.working.get_hypothesis()
         if hypothesis is None:
@@ -241,6 +243,26 @@ class ActionAgent(Agent):
             rule_id=v.get("rule_id"), forced=True,
         )
         return self._write(ctx, decision, hypothesis)
+
+    @traced("agent")
+    def apply_guardrail_now(self, ctx: AgentContext) -> list[Finding]:
+        """Apply a just-fired hold mid-day, for the guardrail's immediate checkpoint.
+
+        Before the first synthesis pass there is no hypothesis yet; the hold
+        still applies, citing only the triggering event.
+        """
+        hold = ctx.memory.working.get_finding("guardrail_hold")
+        if hold is None or not (hold.value or {}).get("forced_action"):
+            return []
+        hypothesis = ctx.memory.working.get_hypothesis()
+        if hypothesis is None:
+            from types import SimpleNamespace
+
+            hypothesis = SimpleNamespace(
+                state=None, confidence_band="high", rationale="",
+                supporting_events=list(hold.evidence_event_ids),
+            )
+        return self._apply_guardrail_hold(ctx, hold, hypothesis)
 
     # --- step 2 -------------------------------------------------------------
 

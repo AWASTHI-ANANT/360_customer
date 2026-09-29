@@ -16,6 +16,14 @@ ASSUMPTIONS (spec was silent):
 - as_of_time is rendered in the dataset's "...Z" form.
 - A guardrail-forced state (Stage 2) overrides the synthesis state when the hold
   carries forced_state; a null forced_state keeps synthesis's state.
+
+Output veto (only with config.guardrail_rules.GUARDRAILS_ENABLED), applied to
+every checkpoint after it is built and before it is validated and written:
+- while a hold has freeze_outbound set, the decision's drafted customer_message
+  is removed and an offer/outreach action is replaced by the hold's action;
+- a non-no_action checkpoint is never auto_approved (forced to escalated);
+- enums are then validated as before, raising on anything off the README list.
+Each veto is appended to notes as "[veto: ...]" and recorded in self.vetoes.
 """
 
 from __future__ import annotations
@@ -27,12 +35,17 @@ from pathlib import Path
 from typing import Any, Optional
 
 from c360.loader import iso
+from config import guardrail_rules as GR
 from config.enums import BANDS, NO_EVENT_STATE, VALID_ACTIONS, VALID_HITL, VALID_STATES
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
 NOTES_RATIONALE_CHARS = 300
 NOTES_MAX_EVIDENCE = 6
+
+# Actions that contact the customer; blocked while outbound is frozen.
+OUTBOUND_ACTIONS = ("personalized_offer", "proactive_retention_outreach")
 
 
 class CheckpointValidationError(ValueError):
@@ -40,8 +53,14 @@ class CheckpointValidationError(ValueError):
 
 
 class CheckpointWriter:
-    def __init__(self, scenario_id: str, output_dir: str | Path = "output") -> None:
+    def __init__(
+        self, scenario_id: str, output_dir: str | Path = "output",
+        guardrails: Optional[bool] = None,
+    ) -> None:
         self.scenario_id = scenario_id
+        self.guardrails = GR.GUARDRAILS_ENABLED if guardrails is None else guardrails
+        # (as_of_time, [reasons]) for every checkpoint the veto changed.
+        self.vetoes: list[tuple[str, list[str]]] = []
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.path = self.output_dir / f"{scenario_id}_checkpoints.json"
@@ -83,8 +102,33 @@ class CheckpointWriter:
             "hitl_status": hitl_status,
             "notes": self._notes(rationale, evidence, used_fallback, decision),
         }
+        if self.guardrails:
+            reasons = self.veto(checkpoint, decision, memory.working.get_finding("guardrail_hold"))
+            if reasons:
+                checkpoint["notes"] = (checkpoint["notes"] + f" [veto: {'; '.join(reasons)}]").strip()
+                self.vetoes.append((checkpoint["as_of_time"], reasons))
         self.validate(checkpoint)
         return checkpoint
+
+    @staticmethod
+    def veto(checkpoint: dict[str, Any], decision: dict, hold) -> list[str]:
+        """Enforce the output rules in place. Returns what was changed."""
+        reasons: list[str] = []
+        hold_v = (hold.value if hold is not None else None) or {}
+        if hold_v.get("freeze_outbound"):
+            draft = decision.get("draft") or {}
+            if draft.get("customer_message"):
+                draft["customer_message"] = None  # the executor reads this; nothing goes out
+                reasons.append("customer_message stripped, outbound frozen")
+            if checkpoint["action"] in OUTBOUND_ACTIONS:
+                blocked = checkpoint["action"]
+                checkpoint["action"] = hold_v.get("forced_action") or "relationship_manager_escalation"
+                checkpoint["action_subtype"] = hold_v.get("forced_subtype")
+                reasons.append(f"{blocked} blocked, outbound frozen")
+        if checkpoint["action"] != "no_action" and checkpoint["hitl_status"] == "auto_approved":
+            checkpoint["hitl_status"] = "escalated"
+            reasons.append(f"{checkpoint['action']} cannot be auto_approved")
+        return reasons
 
     def _notes(
         self, rationale: Optional[str], evidence: list[str],
@@ -124,6 +168,7 @@ class CheckpointWriter:
 
     # --- write --------------------------------------------------------------
 
+    @traced("checkpoint")
     def write(self, as_of_time: datetime | date, memory) -> dict[str, Any]:
         """Append one checkpoint and rewrite the whole file."""
         checkpoint = self.build(as_of_time, memory)

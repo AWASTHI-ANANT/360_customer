@@ -61,6 +61,7 @@ from config import thresholds as T
 from config.categories import category_group, normalise
 
 from .base import Agent, AgentContext, Finding
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -229,6 +230,7 @@ class SignalAgent(Agent):
 
     # --- per event ----------------------------------------------------------
 
+    @traced("agent")
     def on_event(self, event: Event, ctx: AgentContext) -> list[Finding]:
         out: list[Optional[Finding]] = []
         ss, et = event.source_system, event.event_type
@@ -450,6 +452,7 @@ class SignalAgent(Agent):
 
     # --- per day boundary ---------------------------------------------------
 
+    @traced("agent")
     def on_day_boundary(self, sim_date: date, ctx: AgentContext) -> list[Finding]:
         out: list[Optional[Finding]] = [
             self._engagement_trend(sim_date, ctx),

@@ -54,6 +54,7 @@ from config import llm as llm_config
 from config import thresholds as T
 
 from .base import Agent, AgentContext, Finding
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -369,6 +370,7 @@ class SupportAgent(Agent):
 
     # --- per event ----------------------------------------------------------
 
+    @traced("agent")
     def on_event(self, event: Event, ctx: AgentContext) -> list[Finding]:
         # Consent gate: an unconsented social signal is never analysed.
         if event.source_system == "social_signal_consented" and not event.payload.get("consent_flag"):

@@ -32,6 +32,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -141,6 +142,7 @@ def _reviewer() -> str:
     return os.environ.get("REVIEWER_NAME") or "cli_user"
 
 
+@traced("hitl")
 def request_approval(
     decision: dict[str, Any],
     context_shown: str,

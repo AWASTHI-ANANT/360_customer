@@ -25,6 +25,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 from config import llm as llm_config
+from tracing import traced
 
 log = logging.getLogger(__name__)
 
@@ -159,6 +160,7 @@ class LLMClient:
 
     # --- the one call -------------------------------------------------------
 
+    @traced("llm")
     def complete_json(
         self,
         system_prompt: str,
